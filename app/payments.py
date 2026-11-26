@@ -2,9 +2,5 @@ import boto3
 
 
 def payments_client():
-    # Fake AWS documentation example credentials.
-    return boto3.client(
-        "s3",
-        aws_access_key_id="AKIAI44QH8DHBEXAMPLE",
-        aws_secret_access_key="je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY",
-    )
+    # Credentials come from the environment or the instance role.
+    return boto3.client("s3")
