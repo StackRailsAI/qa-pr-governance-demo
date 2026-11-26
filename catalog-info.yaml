@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: qa-orders
+  description: QA fixture - orders service for PR-governance tests.
+  annotations:
+    backstage.io/source-location: url:https://github.com/StackRailsAI/qa-pr-governance-demo/tree/main/
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-qa-orders
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-qa-orders
+  description: QA fixture - owns qa-orders.
+spec:
+  type: team
+  children: []
