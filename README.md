@@ -1,2 +1,4 @@
 # qa-pr-governance-demo
-Throwaway StackRails PR-governance QA fixture (fake data only)
+
+Throwaway fixture for StackRails PR-governance QA on staging (ClickUp 124hhvu581j / 124hhvu52qm).
+Every credential in this repository is a fake documentation example.
