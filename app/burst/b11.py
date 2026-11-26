@@ -1,0 +1,2 @@
+def burst_11(x):
+    return x * 11
