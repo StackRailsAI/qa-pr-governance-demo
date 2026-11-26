@@ -1,0 +1,22 @@
+name: StackRails
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, closed]
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  stackrails:
+    name: StackRails check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+      - uses: StackRailsAI/stackrails-actions/actions/pr-check@83310575ec6d1af464979a5706942266452b350b
+        with:
+          stackrails-url: https://app.stage.stackrails.ai
+          service-key: ${{ secrets.STACKRAILS_SERVICE_KEY }}
