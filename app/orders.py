@@ -7,3 +7,7 @@ def list_orders():
 
 def order_total(order_id):
     return sum(qty * price for _, qty, price in ORDERS.get(order_id, []))
+
+
+def order_count():
+    return len(ORDERS)
